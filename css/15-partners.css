@@ -1,0 +1,46 @@
+.partners {
+  padding-top: 10px;
+}
+
+.partners__marquee {
+  margin-top: 12px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: clamp(34px, 4.6vw, 78px) 0;
+}
+
+/* Use JS marquee for pixel-perfect seamless looping (prevents visible gaps on reset). */
+.partners__marquee .impact__track {
+  animation: none !important;
+}
+
+.partners__marquee .impact__group {
+  align-items: center;
+  gap: 0;
+  padding-right: 0;
+}
+
+.partners__logoUnit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(0px, 0.7vw, 10px);
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.partners__logo {
+  height: clamp(280px, 22vw, 960px);
+  max-height: 960px;
+  max-width: clamp(1200px, 88vw, 4200px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
