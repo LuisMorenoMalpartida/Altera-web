@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.item { padding: 14px; }
+.item h3 { margin: 0 0 6px; font-size: 16px; }
+.item p { margin: 0; color: var(--muted); line-height: 1.5; }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px;
+}
+
+.pagination__meta { color: var(--muted); font-size: 14px; }
+.pagination__controls { display: inline-flex; gap: 8px; }

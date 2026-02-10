@@ -1,0 +1,14 @@
+[
+  {"id": 1, "title": "Préstamo con garantía", "description": "Financiamiento con condiciones claras y tasa competitiva."},
+  {"id": 2, "title": "Inversiones", "description": "Opciones para poner tu dinero a trabajar."},
+  {"id": 3, "title": "CashCLICK", "description": "Programa de referidos para crecer en comunidad."},
+  {"id": 4, "title": "Altera360°", "description": "Soluciones integrales con enfoque financiero."},
+  {"id": 5, "title": "Asesoría", "description": "Acompañamiento para tomar mejores decisiones."},
+  {"id": 6, "title": "Evaluación rápida", "description": "Proceso ágil para conocer tu elegibilidad."},
+  {"id": 7, "title": "Flexibilidad", "description": "Plazos y alternativas alineadas a tu situación."},
+  {"id": 8, "title": "Transparencia", "description": "Información simple, sin letra chica escondida."},
+  {"id": 9, "title": "Soporte", "description": "Canales de atención para resolver dudas."},
+  {"id": 10, "title": "Crecimiento", "description": "Herramientas y enfoque para escalar tu proyecto."},
+  {"id": 11, "title": "Ahorro de tiempo", "description": "Menos fricción, más claridad en el proceso."},
+  {"id": 12, "title": "Seguimiento", "description": "Te acompañamos durante el ciclo del servicio."}
+]
