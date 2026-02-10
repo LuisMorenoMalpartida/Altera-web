@@ -1,0 +1,7 @@
+.app { min-height: 100%; display: flex; flex-direction: column; }
+.main { flex: 1; }
+
+.container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}

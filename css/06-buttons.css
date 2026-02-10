@@ -1,0 +1,40 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(11, 14, 23, 0.04);
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #0b0e17;
+  font-weight: 700;
+}
+
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(11, 14, 23, 0.12);
+  color: #0b0e17;
+  font-weight: 900;
+}
+
+.btn--light {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #0b0e17;
+  font-weight: 800;
+}
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }

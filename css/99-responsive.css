@@ -1,0 +1,14 @@
+@media (max-width: 900px) {
+  .nav--desktop { display: none; }
+  .hamburger { display: inline-flex; }
+
+  .grid { grid-template-columns: 1fr; }
+  .why-carousel__viewport {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .goals__layout { grid-template-columns: 1fr; }
+
+  .why .container { grid-template-columns: 1fr; }
+}
