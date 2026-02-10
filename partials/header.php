@@ -13,6 +13,14 @@ declare(strict_types=1);
         decoding="async"
         loading="eager"
       />
+      <img
+        class="brand__logo brand__logo--side"
+        src="./assets/logo2.avif"
+        alt=""
+        aria-hidden="true"
+        decoding="async"
+        loading="eager"
+      />
     </a>
 
     <nav class="nav nav--desktop" aria-label="Sitio">

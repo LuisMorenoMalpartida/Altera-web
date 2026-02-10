@@ -39,6 +39,10 @@
   display: block;
 }
 
+.brand__logo--side {
+  height: 20px;
+}
+
 .nav {
   display: flex;
   align-items: center;
