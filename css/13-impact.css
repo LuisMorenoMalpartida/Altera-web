@@ -1,0 +1,236 @@
+.impact {
+  padding: 26px 0 30px;
+}
+
+.impact__marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.impact__marquee + .impact__marquee {
+  margin-top: 10px;
+}
+
+.impact__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.impact__group {
+  display: inline-flex;
+  align-items: baseline;
+  gap: clamp(18px, 3vw, 44px);
+  padding-right: clamp(18px, 3vw, 44px);
+}
+
+.impact__unit {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: clamp(26px, 5.2vw, 64px);
+  line-height: 1.1;
+}
+
+.impact__facts {
+  margin-top: 28px;
+}
+
+.impact__factsTitle {
+  margin: 20px 0 12px;
+  font-size: clamp(18px, 2.2vw, 24px);
+  letter-spacing: 0.15px;
+  text-align: center;
+}
+
+.impact__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.impact__stat {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 118px;
+}
+
+.impact__statValue {
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 34px);
+  line-height: 1.05;
+}
+
+.impact__statLabel {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+@media (min-width: 720px) {
+  .impact__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+
+@media (min-width: 980px) {
+  .impact__stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.impact__note {
+  margin-top: 14px;
+  padding: 16px;
+  border-color: var(--accent-2);
+}
+
+.impact__noteText {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(11, 14, 23, 0.78);
+}
+
+.impact__rates {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.impact__rate {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+  border-color: var(--accent);
+}
+
+.impact__rate--primary {
+  border-color: var(--accent);
+}
+
+.impact__rateName {
+  font-weight: 700;
+}
+
+.impact__rateValue {
+  margin-top: 6px;
+  font-weight: 800;
+  font-size: clamp(22px, 3.6vw, 36px);
+  letter-spacing: 0.2px;
+}
+
+.impact__rateMeta {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.impact__afterRates {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.impact__afterCard {
+  overflow: hidden;
+}
+
+.impact__afterCard--image {
+  padding: 0;
+}
+
+.impact__afterImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.impact__afterCard--copy {
+  display: grid;
+  align-content: center;
+  padding: 28px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.impact__afterCopy {
+  margin: 0;
+  font-size: clamp(24px, 3.4vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.impact__afterStrong {
+  font-weight: 800;
+}
+
+.impact__afterMuted {
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.impact__afterCurve {
+  display: block;
+  width: min(520px, 100%);
+  height: auto;
+  margin-top: 12px;
+  color: var(--bg);
+  opacity: 0.85;
+}
+
+.impact__afterCurve path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.impact__afterDesc {
+  margin: 24px 0 0;
+  color: var(--bg);
+  line-height: 1.55;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+  max-width: 56ch;
+}
+
+@media (min-width: 900px) {
+  .impact__afterRates {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.impact__marquee--left .impact__track {
+  animation: impact-scroll-left 18s linear infinite;
+}
+
+.impact__marquee--right .impact__track {
+  animation: impact-scroll-right 18s linear infinite;
+}
+
+@keyframes impact-scroll-left {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes impact-scroll-right {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .impact__marquee--left .impact__track { animation-duration: 40s; }
+  .impact__marquee--right .impact__track { animation-duration: 40s; }
+}
