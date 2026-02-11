@@ -430,11 +430,58 @@ function initImpactMarquee() {
   marquees.forEach((m) => ensureAnimating(m));
 }
 
+function initFaqAccordion() {
+  const items = Array.from(document.querySelectorAll('.fin-faq__item'));
+  if (items.length === 0) return;
+
+  const setOpen = (item, open) => {
+    const answer = item.querySelector('.fin-faq__answer');
+    if (!answer) return;
+
+    if (open) {
+      item.setAttribute('open', '');
+      item.classList.add('is-open');
+      answer.style.maxHeight = `${answer.scrollHeight}px`;
+    } else {
+      item.removeAttribute('open');
+      item.classList.remove('is-open');
+      answer.style.maxHeight = '0px';
+    }
+  };
+
+  items.forEach((item) => {
+    const summary = item.querySelector('summary');
+    const isOpen = item.hasAttribute('open');
+    setOpen(item, isOpen);
+
+    item.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('a')) return;
+      event.preventDefault();
+      setOpen(item, !item.hasAttribute('open'));
+    });
+
+    summary?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      setOpen(item, !item.hasAttribute('open'));
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    items.forEach((item) => {
+      if (!item.hasAttribute('open')) return;
+      const answer = item.querySelector('.fin-faq__answer');
+      if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initWhyCarouselWheel();
   initWhyCardsPickerAnimation();
   initImpactMarquee();
+  initFaqAccordion();
   initFinanciamientoSimulator();
   bootstrap().catch((err) => {
     console.error(err);

@@ -1,0 +1,78 @@
+/* ===== APPS SECTION ===== */
+.fin-apps {
+  padding: 50px 0 70px;
+  background-color: #f8f3ef;
+  color: #1f1f1f;
+}
+
+.fin-apps__header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 36px;
+}
+
+.fin-apps__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background-color: #ff6b35;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.fin-apps__title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.fin-apps__subtitle {
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #3b3b3b;
+  margin: 0;
+}
+
+.fin-apps__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.fin-apps__card {
+  background-color: #ffffff;
+  border: 1px solid #efe7e1;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.fin-apps__cardTitle {
+  font-size: clamp(16px, 2.2vw, 22px);
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.fin-apps__testimonialsTitle {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+  font-size: clamp(16px, 2vw, 22px);
+}
+
+@media (max-width: 768px) {
+  .fin-apps {
+    padding: 40px 0 55px;
+  }
+
+  .fin-apps__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
