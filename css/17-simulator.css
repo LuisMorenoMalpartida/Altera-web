@@ -1,0 +1,232 @@
+.fin-sim {
+  background: var(--bg);
+  color: var(--fg);
+  border-bottom: 1px solid var(--border);
+}
+
+.fin-sim__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.fin-sim__copy {
+  padding: 4px 0;
+}
+
+.fin-sim__kicker {
+  margin: 0 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  font-weight: 800;
+}
+
+.fin-sim__title {
+  margin: 0;
+  font-size: clamp(22px, 2.6vw, 40px);
+  letter-spacing: 0.2px;
+  font-weight: 900;
+}
+
+.fin-sim__lead {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.fin-sim__visual {
+  margin: 18px 0 0;
+  max-width: 460px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+  height: clamp(160px, 22vw, 260px);
+}
+
+.fin-sim__visualImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 30%;
+}
+
+.fin-sim__award {
+  margin: 16px 0 0;
+  font-weight: 800;
+  color: var(--fg);
+}
+
+.fin-sim__card {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: var(--fg);
+  color: var(--bg);
+  overflow: hidden;
+}
+
+.fin-sim__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+}
+
+.fin-sim__cardHeader {
+  padding: 20px 18px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fin-sim__cardTitle {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+}
+
+.fin-sim__cardSubtitle {
+  margin: 8px 0 0;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.fin-sim__progress {
+  padding: 14px 18px 0;
+}
+
+.fin-sim__progressTrack {
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.fin-sim__progressBar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  transition: width 180ms ease-out;
+}
+
+.fin-sim__form {
+  margin: 14px 18px 0;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+@media (min-width: 901px) {
+  .fin-sim__form {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 14px;
+  }
+
+  .fin-sim__submit {
+    grid-column: 1 / -1;
+  }
+}
+
+.fin-sim__field label {
+  display: block;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.fin-sim__field input,
+.fin-sim__field select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+}
+
+.fin-sim__field input::placeholder {
+  color: rgba(11, 14, 23, 0.55);
+}
+
+.fin-sim__field input:focus,
+.fin-sim__field select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.fin-sim__submit {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 12px;
+}
+
+.fin-sim__result {
+  margin: 14px 18px 18px;
+  padding: 14px 14px;
+  color: var(--bg);
+  line-height: 1.8;
+  border-radius: 18px;
+  border: 1px solid var(--accent);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 13px;
+  max-height: 170px;
+  overflow: auto;
+}
+
+.fin-sim__result:empty {
+  display: none;
+}
+
+.fin-sim__result .felicidades {
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-weight: 900;
+  color: var(--bg);
+}
+
+.fin-sim__resultLead {
+  margin: 0;
+}
+
+.fin-sim__resultLead strong {
+  color: var(--accent);
+}
+
+.fin-sim__resultSmall {
+  margin: 10px 0 0;
+  opacity: 0.88;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .fin-sim__grid {
+    grid-template-columns: 1fr;
+  }
+}

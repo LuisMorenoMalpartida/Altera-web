@@ -1,4 +1,5 @@
 import { CatalogController } from './features/catalog/catalogController.js';
+import { initFinanciamientoSimulator } from './features/financiamiento/simulator.js';
 
 function initMobileMenu() {
   const openButton = document.querySelector('[data-menu-open]');
@@ -434,6 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhyCarouselWheel();
   initWhyCardsPickerAnimation();
   initImpactMarquee();
+  initFinanciamientoSimulator();
   bootstrap().catch((err) => {
     console.error(err);
 

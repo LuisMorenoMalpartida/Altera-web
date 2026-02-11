@@ -1,0 +1,40 @@
+.financiamiento {
+  background: var(--bg);
+  color: var(--fg);
+  border-bottom: 1px solid var(--border);
+}
+
+.financiamiento__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.financiamiento__card {
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.financiamiento__card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.financiamiento__card p {
+  margin: 0;
+  color: rgba(11, 14, 23, 0.74);
+  line-height: 1.6;
+}
+
+.financiamiento__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .financiamiento__grid {
+    grid-template-columns: 1fr;
+  }
+}
