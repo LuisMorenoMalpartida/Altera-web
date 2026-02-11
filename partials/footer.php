@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/app.php';
+
 ?>
 <footer class="site-footer">
   <div class="container">
@@ -60,7 +62,7 @@ declare(strict_types=1);
           <div class="footer__col">
             <div class="footer__colTitle">Financiamiento</div>
             <ul class="footer__list">
-              <li><a href="https://www.altera.com.pe/financiamiento" target="_self">Financiamiento</a></li>
+              <li><a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">Financiamiento</a></li>
             </ul>
           </div>
 
@@ -91,8 +93,8 @@ declare(strict_types=1);
 
         <div class="footer__bottomGrid" aria-label="Enlaces del footer">
           <ul class="footer__list footer__list--compact" aria-label="Navegación">
-            <li><a href="https://www.altera.com.pe" target="_self">Home</a></li>
-            <li><a href="https://www.altera.com.pe/financiamiento" target="_self">Financiamiento</a></li>
+            <li><a href="<?php echo htmlspecialchars(app_url('')); ?>" target="_self">Home</a></li>
+            <li><a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">Financiamiento</a></li>
             <li><a href="https://www.altera.com.pe/inversiones" target="_self">Inversiones</a></li>
             <li><a href="https://www.altera.com.pe/programadereferidos" target="_self">CashCLICK</a></li>
             <li><a href="https://www.altera.com.pe/altera360" target="_blank" rel="noreferrer noopener">Altera360°</a></li>

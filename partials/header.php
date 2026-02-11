@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/app.php';
+
 ?>
 <header class="site-header">
   <div class="container site-header__row">
-    <a class="brand" href="./" aria-label="Inicio">
+    <a class="brand" href="<?php echo htmlspecialchars(app_url('')); ?>" aria-label="Inicio">
       <img
         class="brand__logo"
         src="https://static.wixstatic.com/media/83d22d_9c8c1dbd9a56459cab6abeedd82335ef~mv2.png/v1/fill/w_220,h_138,al_c,q_85/Logo%20ALTERA_edited.png"
@@ -15,7 +17,7 @@ declare(strict_types=1);
       />
       <img
         class="brand__logo brand__logo--side"
-        src="./assets/logo2.avif"
+        src="<?php echo htmlspecialchars(app_url('assets/logo2.avif')); ?>"
         alt=""
         aria-hidden="true"
         decoding="async"
@@ -24,7 +26,7 @@ declare(strict_types=1);
     </a>
 
     <nav class="nav nav--desktop" aria-label="Sitio">
-      <a href="https://www.altera.com.pe/financiamiento" target="_self">FINANCIAMIENTO</a>
+      <a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">FINANCIAMIENTO</a>
       <a href="https://www.altera.com.pe/inversiones" target="_self">INVERSIONES</a>
       <a href="https://www.altera.com.pe/programadereferidos" target="_self">CashCLICK</a>
       <a href="https://www.altera.com.pe/fintegra" target="_self">Altera360°</a>
@@ -49,13 +51,13 @@ declare(strict_types=1);
     <button class="mobile-menu__close" type="button" aria-label="Close" data-menu-close>×</button>
 
     <nav class="nav nav--mobile" aria-label="Sitio">
-      <a href="https://www.altera.com.pe/financiamiento" target="_self">FINANCIAMIENTO</a>
+      <a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">FINANCIAMIENTO</a>
       <a href="https://www.altera.com.pe/inversiones" target="_self">INVERSIONES</a>
       <a href="https://www.altera.com.pe/programadereferidos" target="_self">CashCLICK</a>
       <a href="https://www.altera.com.pe/fintegra" target="_self">Altera360°</a>
     </nav>
 
-    <a class="mobile-menu__home" href="https://www.altera.com.pe" target="_self" aria-label="Altera">
+    <a class="mobile-menu__home" href="<?php echo htmlspecialchars(app_url('')); ?>" target="_self" aria-label="Altera">
       <img
         class="mobile-menu__logo"
         src="https://static.wixstatic.com/media/83d22d_f3b69ed5f4924cde91a94aa5cddf1990~mv2.png/v1/fill/w_240,h_60,al_c,q_85/50_edited.png"
