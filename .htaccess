@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Redirige /financiamiento/solicitud/ a /financiamiento/index.php?view=solicitud
+RewriteRule ^financiamiento/solicitud/?$ financiamiento/index.php?view=solicitud [L,QSA]

@@ -1,0 +1,212 @@
+/* ===== SOLICITUD SECTION ===== */
+.fin-solicitud {
+  padding: 60px 0 80px;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.fin-solicitud__header {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fin-solicitud__title {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--fg);
+}
+
+.fin-solicitud__lead {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.fin-solicitud__content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.fin-solicitud__video-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.fin-solicitud__video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #eee;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: 600;
+  border: 2px dashed #ddd;
+}
+
+.fin-solicitud__block {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.fin-solicitud__subtitle {
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #FF6300; /* Naranja específico de Altera */
+}
+
+.fin-solicitud__list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: disc;
+}
+
+.fin-solicitud__list li {
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.5;
+  color: #111;
+  font-weight: 400;
+}
+
+.fin-solicitud__note {
+  text-align: center;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #000;
+  margin-top: 40px;
+  line-height: 1.6;
+  grid-column: 1 / -1;
+  font-weight: 700;
+}
+
+.fin-solicitud__note a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* Conversational AI Video Interface */
+.fin-solicitud__video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin: 0 auto;
+}
+
+.fin-solicitud__video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.fin-solicitud__video-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.fin-solicitud__chat-bubble {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  padding: 16px 24px;
+  border-radius: 16px 16px 16px 0;
+  font-size: clamp(16px, 2vw, 20px);
+  margin-bottom: 24px;
+  max-width: 80%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.fin-solicitud__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fin-solicitud__btn {
+  background-color: #FF6300;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  animation: slideUp 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fin-solicitud__btn:hover {
+  background-color: #e55a00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 99, 0, 0.3);
+}
+
+.fin-solicitud__btn:nth-child(1) { animation-delay: 0.1s; }
+.fin-solicitud__btn:nth-child(2) { animation-delay: 0.2s; }
+.fin-solicitud__btn:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .fin-solicitud__video-wrapper {
+    aspect-ratio: 9 / 16; /* Vertical for mobile feel */
+  }
+  .fin-solicitud__video-content {
+    padding: 24px;
+  }
+  .fin-solicitud__chat-bubble {
+    font-size: 16px;
+  }
+  .fin-solicitud__options {
+    flex-direction: column;
+    width: 100%;
+  }
+  .fin-solicitud__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

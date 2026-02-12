@@ -1,0 +1,80 @@
+{
+  "start_node": "intro",
+  "nodes": {
+    "intro": {
+      "text": "Hola, soy Alana. Estoy aquí para guiarte. Para empezar, cuéntame, ¿eres persona natural con negocio o representas a una empresa?",
+      "options": [
+        { "label": "Persona Natural con Negocio", "next_node": "req_natural" },
+        { "label": "Empresa (Persona Jurídica)", "next_node": "req_juridica" }
+      ]
+    },
+    "req_natural": {
+      "text": "Perfecto. Para personas naturales necesitamos DNI y recibos de servicios. ¿Cuentas con un inmueble inscrito en Registros Públicos para la garantía?",
+      "options": [
+        { "label": "Sí, tengo inmueble inscrito", "next_node": "garantia_si" },
+        { "label": "Tengo inmueble pero no está inscrito", "next_node": "garantia_no_inscrita" },
+        { "label": "No tengo inmueble", "next_node": "garantia_no" }
+      ]
+    },
+    "req_juridica": {
+      "text": "Entendido. Para empresas requerimos vigencia de poderes y RUC. ¿La empresa o un aval cuenta con una propiedad inscrita para la garantía?",
+      "options": [
+        { "label": "Sí, tenemos propiedad inscrita", "next_node": "garantia_si" },
+        { "label": "No tenemos propiedad", "next_node": "garantia_no" }
+      ]
+    },
+    "garantia_si": {
+      "text": "Excelente. Eso es lo más importante. ¿Qué monto de financiamiento estás buscando aproximadamente?",
+      "options": [
+        { "label": "Entre S/ 20,000 y S/ 50,000", "next_node": "cierre_ok" },
+        { "label": "Entre S/ 50,000 y S/ 300,000", "next_node": "cierre_ok" },
+        { "label": "Más de S/ 300,000", "next_node": "cierre_high" }
+      ]
+    },
+    "garantia_no": {
+      "text": "Nuestros financiamientos requieren obligatoriamente una garantía hipotecaria. Sin embargo, ¿tienes algún familiar o socio que pueda ser tu aval?",
+      "options": [
+        { "label": "Sí, tengo un aval", "next_node": "garantia_si" },
+        { "label": "No tengo aval", "next_node": "fin_sin_garantia" }
+      ]
+    },
+    "garantia_no_inscrita": {
+      "text": "Es necesario que el inmueble esté inscrito en SUNARP. Podemos asesorarte para regularizarlo, pero tomará tiempo. ¿Deseas que te contactemos para eso?",
+      "options": [
+        { "label": "Sí, necesito asesoría legal", "next_node": "asesoria_legal" },
+        { "label": "Veré otras opciones", "next_node": "fin_despedida" }
+      ]
+    },
+    "cierre_ok": {
+      "text": "Calificas para una pre-evaluación. Por favor, completa el formulario que está arriba o contáctanos por WhatsApp para agendar una visita.",
+      "options": [
+        { "label": "Ir al WhatsApp", "action": "link", "url": "https://wa.me/51924786269" },
+        { "label": "Volver a empezar", "next_node": "intro" }
+      ]
+    },
+    "cierre_high": {
+      "text": "Para montos altos ofrecemos tasas preferenciales. Un asesor especializado debería ver tu caso personalmente.",
+      "options": [
+        { "label": "Contactar Asesor", "action": "link", "url": "https://wa.me/51924786269" }
+      ]
+    },
+    "fin_sin_garantia": {
+      "text": "Lo sentimos, por el momento solo operamos con garantía hipotecaria. Gracias por tu interés en Altera.",
+      "options": [
+        { "label": "Entendido, gracias", "next_node": "intro" }
+      ]
+    },
+    "asesoria_legal": {
+      "text": "Estupendo. Nuestro equipo legal puede revisar tu caso. Escríbenos al correo legal@altera.com.pe.",
+      "options": [
+        { "label": "Gracias", "next_node": "intro" }
+      ]
+    },
+    "fin_despedida": {
+      "text": "Gracias por visitarnos. Esperamos poder ayudarte en el futuro.",
+      "options": [
+        { "label": "Reiniciar", "next_node": "intro" }
+      ]
+    }
+  }
+}
