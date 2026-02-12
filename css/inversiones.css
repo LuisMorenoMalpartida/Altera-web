@@ -1,97 +1,131 @@
-/* investment-focus styles */
+/* --- FIX: EL HEADER SIEMPRE ARRIBA --- */
+header, .header, .nav {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+/* --- SECCIÓN ENFOQUE DE INVERSIÓN --- */
 .investment-focus {
-  margin-bottom: 64px;
-  background: #FF6B35;
-  padding: 0;
-  border-radius: 0 0 32px 32px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.07);
-}
-.investment-focus__card {
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 56px 28px 40px 28px;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.investment-focus__title {
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 40px;
-  letter-spacing: -1.5px;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.investment-focus__layout {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  width: 100%;
-}
-.investment-focus__left {
-  flex: 0 0 340px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.investment-focus__images {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.investment-focus__img--left {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
-  object-fit: cover;
-}
-.investment-focus__textblock {
-  text-align: center;
-}
-.investment-focus__text {
-  font-size: 1.13rem;
-  color: #fff;
-  margin-bottom: 16px;
-  line-height: 1.7;
-  text-align: left !important;
-  width: 100%;
-  display: block;
-  margin-left: 0;
-}
-.investment-focus__right {
-  flex: 1 1 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
-}
-.investment-focus__img--cover {
-  width: 100%;
-  max-width: 420px;
-  height: 220px;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
-  object-fit: cover;
-  align-self: stretch;
-}
-@media (max-width: 900px) {
-  .investment-focus__layout {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .investment-focus__right {
+    position: relative;
+    z-index: 1; /* Valor bajo para no tapar el menú */
+    background: #FF6B35;
+    padding: 100px 0;
+    margin-bottom: 64px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden; /* Corta cualquier imagen que quiera subir al navbar */
+    display: flex;
     justify-content: center;
-  }
-  .investment-focus__img--cover {
-    max-width: 100%;
-    height: 180px;
-  }
+}
+
+.investment-focus__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+}
+
+.investment-focus__layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Columna Izquierda: Título arriba, Texto abajo */
+.investment-focus__left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.investment-focus__title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 30px; /* Espacio para que el texto respire */
+    letter-spacing: -2px;
+}
+
+.investment-focus__textblock {
+    width: 100%;
+}
+
+.investment-focus__text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Columna Derecha: Imágenes con capas */
+.investment-focus__right {
+    flex: 1 1 50%;
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.investment-focus__image {
+    border-radius: 32px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+.investment-focus__image--1 {
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.investment-focus__image--2 {
+    width: 220px;
+    height: 350px;
+    position: relative;
+    z-index: 2; /* Encima de la imagen 1 */
+    background: #ffffff;
+    padding: 10px;
+    margin-right: 150px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+    .investment-focus__layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .investment-focus__left {
+        align-items: center;
+    }
+    .investment-focus__title {
+        font-size: 2.8rem;
+    }
+    .investment-focus__right {
+        width: 100%;
+        justify-content: center;
+        height: 420px;
+    }
+    .investment-focus__image--1 {
+        width: 280px;
+        height: 380px;
+        position: relative;
+        right: auto;
+    }
+    .investment-focus__image--2 {
+        display: none; /* Ocultamos la pequeña en tablets para no amontonar */
+    }
+}
+
+@media (max-width: 600px) {
+    .investment-focus__title {
+        font-size: 2.2rem;
+    }
+    .investment-focus__container {
+        padding: 0 20px;
+    }
 }

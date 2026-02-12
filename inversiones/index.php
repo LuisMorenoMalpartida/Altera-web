@@ -23,9 +23,11 @@ $heroCtaTarget = '_self';
 <body>
   <div class="app">
     <?php require_once __DIR__ . '/../partials/header.php'; ?>
+    
     <main id="app-main" class="main" role="main">
       <?php require_once __DIR__ . '/../partials/hero.php'; ?>
-      <section class="fin-sim" aria-label="Simulador de inversiones">
+
+      <section class="fin-sim" id="simulador" aria-label="Simulador de inversiones">
         <div class="container">
           <header class="fin-sim__header">
             <h2 class="fin-sim__title">Simula tu inversión</h2>
@@ -33,9 +35,9 @@ $heroCtaTarget = '_self';
           <div class="fin-sim__grid">
             <div class="fin-sim__copy">
               <p class="fin-sim__lead">En Altera FINANCE tienes una inversión 360º GRADOS. En minutos simula tu inversión con la más robusta estructura de inversión del mercado que contempla todo de INICIO a FIN.</p>
-              <!--<img src="../assets/partners/entrepreneur-orange.png" alt="Emprendedor feliz con ropa naranja mirando el celular" style="max-width:320px; margin-bottom:16px;" />-->
               <p class="fin-sim__award">Ganamos el 8G-2023 de Innovate Startup PERU</p>
             </div>
+            
             <div class="fin-sim__card" style="position:relative;">
               <div class="fin-sim__badge">
                 <img src="../assets/Logo_financiamiento.avif" alt="Logo Altera inversiones" class="fin-sim__badgeImg" />
@@ -88,38 +90,36 @@ $heroCtaTarget = '_self';
             </div>
           </div>
         </div>
-    </main>
+      </main>
 
-    <!-- Sección Enfoque de Inversión fuera del main -->
-    <section class="investment-focus" aria-label="Enfoque de Inversión">
-      <div class="container">
-        <div class="investment-focus__card">
-          <h2 class="investment-focus__title">Enfoque de Inversión</h2>
+      <section class="investment-focus" aria-label="Enfoque de Inversión">
+        <div class="investment-focus__container">
           <div class="investment-focus__layout">
+            
             <div class="investment-focus__left">
-              <div class="investment-focus__images">
-                <img src="../assets/1.avif" alt="Imagen inversión 1" class="investment-focus__img investment-focus__img--left" />
-              </div>
+              <h2 class="investment-focus__title">Enfoque de Inversión</h2>
               <div class="investment-focus__textblock">
                 <p class="investment-focus__text">
-                  Las pequeñas y medianas empresas (PYMEs) constituyen un pilar fundamental de la economía peruana, representando más del 60% del empleo total y un porcentaje significativo del PIB. Sin embargo, el acceso al financiamiento sigue siendo uno de los mayores retos que enfrentan estas empresas, lo que limita su capacidad para crecer, innovar y competir en mercados tanto locales como internacionales.
+                  Las pequeñas y medianas empresas (PYMEs) constituyen un pilar fundamental de la economía peruana, representando más del 60% del empleo total y un porcentaje significativo del PIB. Sin embargo, el acceso al financiamiento sigue siendo uno de los mayores retos que enfrentan estas empresas.
                 </p>
                 <p class="investment-focus__text">
-                  La inversión en el financiamiento de PYMEs a través de una plataforma Fintech en Perú ofrece un potencial considerable para rendimientos ajustados al riesgo atractivos, al tiempo que contribuye al desarrollo económico del país. Esta tesis no solo busca rendimientos financieros sino también impacto social, apoyando a un sector crucial, pero subatendido de la economía peruana.
+                  La inversión en el financiamiento de PYMEs a través de una plataforma Fintech en Perú ofrece un potencial considerable para rendimientos ajustados al riesgo atractivos, al tiempo que contribuye al desarrollo económico del país.
                 </p>
               </div>
             </div>
+
             <div class="investment-focus__right">
-              <img src="../assets/111.avif" alt="Imagen inversión 2" class="investment-focus__img investment-focus__img--cover" />
+              <img src="../assets/1.avif" alt="Inversión 1" class="investment-focus__image investment-focus__image--1" />
+              <img src="../assets/111.avif" alt="Inversión 2" class="investment-focus__image investment-focus__image--2" />
             </div>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <?php require_once __DIR__ . '/../partials/footer.php'; ?>
   </div>
-  <script type="module" src="../js/main.js"></script>
+
   <script>
     function actualizarProgreso() {
       let progreso = 0;
@@ -131,44 +131,39 @@ $heroCtaTarget = '_self';
       progressBar.style.width = progreso + '%';
       progressBar.innerText = progreso + '%';
     }
+
     function obtenerTasaPorRiesgo(riesgo, moneda) {
-      const tasasSoles = {
-        "AA": 14.5, "A": 16, "B": 19, "C": 24.5, "D": 33, "E": 39, "F": 44
-      };
+      const tasasSoles = { "AA": 14.5, "A": 16, "B": 19, "C": 24.5, "D": 33, "E": 39, "F": 44 };
       let tasa = tasasSoles[riesgo] || 0;
-      if (moneda === "dolares") {
-        tasa -= 1;
-      }
+      if (moneda === "dolares") { tasa -= 1; }
       return tasa;
     }
+
     function calcularInversion() {
       const monto = parseFloat(document.getElementById("monto").value);
       const moneda = document.getElementById("moneda").value;
       const riesgo = document.getElementById("riesgo").value;
       const plazo = parseInt(document.getElementById("plazo").value);
-      const tasaAnual = obtenerTasaPorRiesgo(riesgo, moneda);
-      const tasaMensual = Math.pow(1 + tasaAnual / 100, 1 / 12) - 1;
-      const simboloMoneda = moneda === "soles" ? "S/" : "$";
+      
       if (isNaN(monto) || monto < 30000 || isNaN(plazo) || !riesgo) {
         alert("Por favor, complete todos los campos correctamente.");
         return;
       }
+
+      const tasaAnual = obtenerTasaPorRiesgo(riesgo, moneda);
+      const tasaMensual = Math.pow(1 + tasaAnual / 100, 1 / 12) - 1;
+      const simboloMoneda = moneda === "soles" ? "S/" : "$";
+      
       const montoFinal = monto * Math.pow(1 + tasaMensual, plazo);
       const gananciaIntereses = montoFinal - monto;
       const impuesto = gananciaIntereses * 0.05;
       const gananciaNeta = gananciaIntereses - impuesto;
-      let cuotaMensual;
-      cuotaMensual = (monto * tasaMensual) / (1 - Math.pow(1 + tasaMensual, -plazo));
+
       document.getElementById("resultado").innerHTML = `
-        <div>
-          <p class="fin-sim__resultLead"><strong>Resumen de Inversión:</strong></p>
-          <p>Rendimiento Anual: <span class="highlight">${tasaAnual.toFixed(2)}% TEA</span></p>
-          <p>Rendimiento Mensual: <span class="highlight">${(tasaMensual * 100).toFixed(2)}% TEM</span></p>
-          <p>Impuesto sobre ganancia (5%): ${simboloMoneda}${impuesto.toFixed(2)}</p>
-          <p>Cuota Mensual: ${simboloMoneda}${cuotaMensual.toFixed(2)}</p>
-          <p>Ganancia Total Estimada: ${simboloMoneda}${gananciaIntereses.toFixed(2)} (antes de impuestos)</p>
-          <p><strong>Ganancia Neta después de Impuestos:</strong> ${simboloMoneda}${gananciaNeta.toFixed(2)}</p>
-          <p><strong>RENDIMIENTO TOTAL DE LA INVERSION:</strong> ${simboloMoneda}${montoFinal.toFixed(2)}</p>
+        <div style="margin-top:20px; padding:15px; background:#fff; border-radius:12px; color:#333;">
+          <p>TEA: <strong>${tasaAnual.toFixed(2)}%</strong></p>
+          <p>Ganancia Neta: <strong>${simboloMoneda}${gananciaNeta.toFixed(2)}</strong></p>
+          <p>Total a recibir: <strong>${simboloMoneda}${montoFinal.toFixed(2)}</strong></p>
         </div>
       `;
     }
