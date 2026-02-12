@@ -100,7 +100,7 @@ $repeat = 10;
 
       <div class="impact__afterRates" aria-label="Equilibre hoy, asegure mañana, prospere siempre">
         <div class="card impact__afterCard impact__afterCard--image">
-          <img class="impact__afterImg" src="./assets/imagen.jpg" alt="Chica" loading="lazy" decoding="async" />
+          <img class="impact__afterImg" src="<?php echo htmlspecialchars(app_url('assets/imagen.jpg')); ?>" alt="Chica" loading="lazy" decoding="async" />
         </div>
 
         <div class="card impact__afterCard impact__afterCard--copy">

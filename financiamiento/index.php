@@ -30,10 +30,14 @@ $heroCtaRel = 'noreferrer noopener';
     <?php require __DIR__ . '/../partials/header.php'; ?>
 
     <main id="app-main" class="main" role="main">
-      <?php require __DIR__ . '/../partials/hero.php'; ?>
-
-      <?php require __DIR__ . '/../partials/financiamiento-simulator.php'; ?>
-
+      <?php
+        if (isset($_GET['view']) && $_GET['view'] === 'solicitud') {
+          include __DIR__ . '/solicitud.php';
+        } else {
+          require __DIR__ . '/../partials/hero.php';
+          require __DIR__ . '/../partials/financiamiento-simulator.php';
+        }
+      ?>
     </main>
 
     <?php require __DIR__ . '/../partials/footer.php'; ?>

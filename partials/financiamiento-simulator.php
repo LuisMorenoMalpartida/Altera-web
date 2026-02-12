@@ -98,7 +98,7 @@ declare(strict_types=1);
       <div class="fin-steps__introImages">
         <figure class="fin-steps__figure">
           <img
-            src="<?php echo htmlspecialchars(app_url('assets/partners/girl-smiling.avif')); ?>"
+            src="<?php echo htmlspecialchars(app_url('assets/Niña sonriente.png')); ?>"
             alt="Niña sonriente"
             loading="lazy"
             decoding="async"
@@ -107,7 +107,7 @@ declare(strict_types=1);
         </figure>
         <figure class="fin-steps__figure">
           <img
-            src="<?php echo htmlspecialchars(app_url('assets/partners/man-smiling.avif')); ?>"
+            src="<?php echo htmlspecialchars(app_url('assets/Retrato de hombre sonriente.png')); ?>"
             alt="Retrato de hombre sonriente"
             loading="lazy"
             decoding="async"
@@ -146,7 +146,7 @@ declare(strict_types=1);
         </div>
       </div>
       <div class="fin-steps__ctaWrap">
-        <a href="#" class="btn btn--primary fin-steps__ctaBtn">Solicitar Ahora <span class="btn__icon" aria-hidden="true">→</span></a>
+        <a href="<?php echo htmlspecialchars(app_url('financiamiento/solicitud/')); ?>" class="btn btn--primary fin-steps__ctaBtn">Solicitar Ahora <span class="btn__icon" aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -159,6 +159,20 @@ declare(strict_types=1);
       <p class="fin-apps__count">2</p>
       <h2 class="fin-apps__title">Descubre Alanna y Savi App</h2>
       <p class="fin-apps__subtitle">Tus compañeros de bienestar Financiero Todo en UNO</p>
+      <figure class="fin-apps__hero" aria-label="Celular">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <img
+            class="fin-apps__heroImg"
+            src="<?php echo htmlspecialchars(app_url('assets/celular.avif')); ?>"
+            alt="Celular"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="phone-home"></div>
+        </div>
+      </figure>
+      <div aria-hidden="true" class="yPXgy9 YqUfCX inner-box wixui-box"></div>
     </header>
 
     <div class="fin-apps__grid">

@@ -27,7 +27,7 @@ require_once __DIR__ . '/app.php';
 
     <nav class="nav nav--desktop" aria-label="Sitio">
       <a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">FINANCIAMIENTO</a>
-      <a href="https://www.altera.com.pe/inversiones" target="_self">INVERSIONES</a>
+      <a href="/Altera/inversiones/" target="_self">INVERSIONES</a>
       <a href="https://www.altera.com.pe/programadereferidos" target="_self">CashCLICK</a>
       <a href="https://www.altera.com.pe/fintegra" target="_self">Altera360°</a>
     </nav>
@@ -52,7 +52,7 @@ require_once __DIR__ . '/app.php';
 
     <nav class="nav nav--mobile" aria-label="Sitio">
       <a href="<?php echo htmlspecialchars(app_url('financiamiento/')); ?>" target="_self">FINANCIAMIENTO</a>
-      <a href="https://www.altera.com.pe/inversiones" target="_self">INVERSIONES</a>
+      <a href="/Altera/inversiones/" target="_self">INVERSIONES</a>
       <a href="https://www.altera.com.pe/programadereferidos" target="_self">CashCLICK</a>
       <a href="https://www.altera.com.pe/fintegra" target="_self">Altera360°</a>
     </nav>
