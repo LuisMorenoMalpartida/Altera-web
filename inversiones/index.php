@@ -18,6 +18,7 @@ $heroCtaTarget = '_self';
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css?v=20260212" />
   <link rel="stylesheet" href="../css/17-simulator.css" />
+  <link rel="stylesheet" href="../css/inversiones.css" />
 </head>
 <body>
   <div class="app">
@@ -87,9 +88,6 @@ $heroCtaTarget = '_self';
             </div>
           </div>
         </div>
-      </section>
-          <section class="investment-focus" aria-label="Enfoque de Inversión">
-      </section>
     </main>
 
     <!-- Sección Enfoque de Inversión fuera del main -->
@@ -97,12 +95,24 @@ $heroCtaTarget = '_self';
       <div class="container">
         <div class="investment-focus__card">
           <h2 class="investment-focus__title">Enfoque de Inversión</h2>
-          <p class="investment-focus__text">
-            Las pequeñas y medianas empresas (PYMEs) constituyen un pilar fundamental de la economía peruana, representando más del 60% del empleo total y un porcentaje significativo del PIB. Sin embargo, el acceso al financiamiento sigue siendo uno de los mayores retos que enfrentan estas empresas, lo que limita su capacidad para crecer, innovar y competir en mercados tanto locales como internacionales.
-          </p>
-          <p class="investment-focus__text">
-            La inversión en el financiamiento de PYMEs a través de una plataforma Fintech en Perú ofrece un potencial considerable para rendimientos ajustados al riesgo atractivos, al tiempo que contribuye al desarrollo económico del país. Esta tesis no solo busca rendimientos financieros sino también impacto social, apoyando a un sector crucial, pero subatendido de la economía peruana.
-          </p>
+          <div class="investment-focus__layout">
+            <div class="investment-focus__left">
+              <div class="investment-focus__images">
+                <img src="../assets/1.avif" alt="Imagen inversión 1" class="investment-focus__img investment-focus__img--left" />
+              </div>
+              <div class="investment-focus__textblock">
+                <p class="investment-focus__text">
+                  Las pequeñas y medianas empresas (PYMEs) constituyen un pilar fundamental de la economía peruana, representando más del 60% del empleo total y un porcentaje significativo del PIB. Sin embargo, el acceso al financiamiento sigue siendo uno de los mayores retos que enfrentan estas empresas, lo que limita su capacidad para crecer, innovar y competir en mercados tanto locales como internacionales.
+                </p>
+                <p class="investment-focus__text">
+                  La inversión en el financiamiento de PYMEs a través de una plataforma Fintech en Perú ofrece un potencial considerable para rendimientos ajustados al riesgo atractivos, al tiempo que contribuye al desarrollo económico del país. Esta tesis no solo busca rendimientos financieros sino también impacto social, apoyando a un sector crucial, pero subatendido de la economía peruana.
+                </p>
+              </div>
+            </div>
+            <div class="investment-focus__right">
+              <img src="../assets/111.avif" alt="Imagen inversión 2" class="investment-focus__img investment-focus__img--cover" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
