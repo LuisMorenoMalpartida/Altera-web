@@ -88,7 +88,25 @@ $heroCtaTarget = '_self';
           </div>
         </div>
       </section>
+          <section class="investment-focus" aria-label="Enfoque de Inversión">
+      </section>
     </main>
+
+    <!-- Sección Enfoque de Inversión fuera del main -->
+    <section class="investment-focus" aria-label="Enfoque de Inversión">
+      <div class="container">
+        <div class="investment-focus__card">
+          <h2 class="investment-focus__title">Enfoque de Inversión</h2>
+          <p class="investment-focus__text">
+            Las pequeñas y medianas empresas (PYMEs) constituyen un pilar fundamental de la economía peruana, representando más del 60% del empleo total y un porcentaje significativo del PIB. Sin embargo, el acceso al financiamiento sigue siendo uno de los mayores retos que enfrentan estas empresas, lo que limita su capacidad para crecer, innovar y competir en mercados tanto locales como internacionales.
+          </p>
+          <p class="investment-focus__text">
+            La inversión en el financiamiento de PYMEs a través de una plataforma Fintech en Perú ofrece un potencial considerable para rendimientos ajustados al riesgo atractivos, al tiempo que contribuye al desarrollo económico del país. Esta tesis no solo busca rendimientos financieros sino también impacto social, apoyando a un sector crucial, pero subatendido de la economía peruana.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <?php require_once __DIR__ . '/../partials/footer.php'; ?>
   </div>
   <script type="module" src="../js/main.js"></script>
